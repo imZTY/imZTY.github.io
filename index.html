@@ -1,1 +1,40 @@
-hello world
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://vuejs.org/js/vue.min.js"></script>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>四魂之玉的守护者</title>
+</head>
+<body>
+    <div id="top">
+        <h1 class="text-center">这是Tony的个人博客网站，会持续更新，欢迎常来游玩。</h1>
+    </div>
+    <div id="content" class="text-center">
+        <!-- 第一部分：初始化网站时的图片 -->
+        <div id="initial_pic">
+            <div class="pic_div" v-for="index in items">
+                <img class="pic_item" :src="['http://pcmjwhw1e.bkt.clouddn.com/blogInitialPicture/initial'+(index)+'.jpg']">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="bottom" class="text-success text-center">
+        本网站仅用于学习交流，保留所有版权，©Copyright 2018-2020 Tony Zeng.<a href="http://www.miitbeian.gov.cn"><h3>粤ICP备18056205号-2</h3></a>
+    </div>
+</body>
+
+
+<link rel="stylesheet" type="text/css" href="css/initial/index.css">
+<script>
+    var example1 = new Vue({
+        el: '#initial_pic',
+        data: {
+            items: [1,2,3,4,5,6,7,8]
+        }
+    })
+
+</script>
+
+</html>
