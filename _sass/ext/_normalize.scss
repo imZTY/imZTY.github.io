@@ -182,7 +182,7 @@ sub {
 //
 
 img {
-    border: 0;
+    border: 0;
 }
 
 //
@@ -226,12 +226,21 @@ pre {
 // Address odd `em`-unit font size rendering in all browsers.
 //
 
-code,
 kbd,
 pre,
 samp {
     font-family: monospace, monospace;
     font-size: 1em;
+}
+
+
+code.highlighter-rouge{
+    // font-family: monospace, monospace;
+    font-size: 1em;
+    background-color: #eeeeee;
+    color: #388e3c;
+    font-weight: bold;
+    padding: 0.15em 0.25em;
 }
 
 // Forms
@@ -417,12 +426,12 @@ optgroup {
 // Remove most spacing between table cells.
 //
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+// table {
+//     border-collapse: collapse;
+//     border-spacing: 0;
+// }
 
-td,
-th {
-    padding: 0;
-}
+// td,
+// th {
+//     padding: 0;
+// }

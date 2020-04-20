@@ -2,24 +2,24 @@
 layout: post
 title:  "Hello world Post!"
 date:   2020-04-17 17:35:50 +0800
-categories: jekyll update
+categories: projectDiary
 permalink: /:categories/:year/:month/:day/:title/
 zty:
    yml:
       hello: hello front matter
-tags: taga, tagb
+tags: taga, tagb, 项目日记
 excerpt_separator: <!--more-->
 ---
 You’ll find this post in your `_posts` directory. <!--more-->Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-{{ page.zty.yml.hello }}
+[{{ page.zty.yml.hello }}](/)
 
-//itr: page.tags[i]
-//len: page.tags.size
-{{ page.tags }}
 
 Jekyll requires blog post files to be named according to the following format:
+
 `YEAR-MONTH-DAY-title.MARKUP`
+
+> This is a cite.
 
 Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
@@ -43,12 +43,12 @@ print_hi('Tom')
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
-![首页](https://upload-images.jianshu.io/upload_images/8463645-62686f28d517c842.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![首页](/assets/pic/post-content/4c909388920d33b750c4614f598fd7f.png)
 
-|a|b微软雅黑|c|
-|:-|:-|:-|
-|11111  一 |2 二微软雅黑 |3333333 三|
-|1|222222|3|
+|a | b微软雅黑 | c | d| e|
+|:--|:--|:--|:--|:--|
+|11111  一 |2 二微软雅黑 |3333333 三|2 二微软雅黑 |3333333 三|
+|1 | 222222 | 3 |2 二微软雅黑 |3333333 三|
 
 >Hello world
 

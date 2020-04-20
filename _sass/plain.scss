@@ -8,11 +8,55 @@ $smallMobileW: 480px;
 $bigScreenW: 1600px;
 $leftWidth: 220px;
 
+// .post > blockquote {
+//   padding: 20px;
+//   background-color: #fafafa;
+//   border-left: 6px solid #e6e6e6;
+//   word-break: break-word;
+//   font-size: 16px;
+//   font-weight: normal;
+//   line-height: 30px;
+//   margin: 0 0 20px;
+//  }
+
+blockquote {
+  background-color: #fafafa;
+  border-left: 6px solid #e6e6e6;
+  padding: 0.1em 1em;
+  margin: 0 0;
+}
+
+div.post > table{
+  min-width: 100%;
+  margin-bottom: 30px;
+  border-spacing: 0;
+  border: 1px solid #757575;
+  border-left: none;
+  word-break: break-word;
+}
+
+div.post table th,div.post table td{
+  padding: 8px;
+  border: 1px solid #757575;
+  line-height: 20px;
+  vertical-align: middle;
+}
+
+div.post table tr:nth-of-type(2n){
+  background-color: hsla(0,0%,70.2%,.15);
+}
+
+img{
+  max-width: 100%;
+  border: 3px solid #eee;
+}
+
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
 
 body {
   font-family: "Raleway", sans-serif;
@@ -23,7 +67,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-img,
 embed,
 object,
 video {
@@ -141,12 +184,12 @@ main {
       display: block;
       font-family: 'Merriweather';
       text-align: center;
-      padding: 1rem 0;
-      text-decoration: none;
+      padding: 0.5rem 0;
+      // text-decoration: none;
       border-bottom: 1px solid #ececec;
 
       @media screen and (max-width: $mobileW) {
-        padding: 2rem 0;
+        padding: 0.5rem 0;
       }
     }
   }

@@ -7,6 +7,18 @@ description: > # this means to ignore newlines until "show_exerpts:"
   Google search results) and in your feed.xml site description.
 show_excerpts: true # set to true to show excerpts on the homepage
 
+collections:
+  category:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "sortByCategory"  #分类页使用的样式
+
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
@@ -16,7 +28,13 @@ plainwhite:
   tagline: Java Developer
   date_format: "%b %-d, %Y"
   sitemap: true # set to true to generate sitemap.xml content
-
+  navigation:
+    - title: 首页
+      url: /
+    - title: 一篇就够
+      url: /tagSort/one-post-enough/
+    - title: 项目日记
+      url: /tagSort/project-diary/
   # generate social links in footer
   social_links:
     github:  imZTY

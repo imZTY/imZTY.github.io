@@ -8,7 +8,7 @@ permalink: /about/
 
 如果文章内容对你有帮助，那就请它吃点零食吧，嘻嘻^_^
 
-![老伟的狗](/assets/pic/about/dog_long1.png)
+![老伟的狗](http://qiniu.zengtianyi.top/githubpage/dog_long1.png)
 
 lol 微信收款码与支付宝收款码分别如下：
 
