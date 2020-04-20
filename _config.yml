@@ -15,7 +15,13 @@ defaults:
   -
     scope:
       path: ""
-      type: category
+      type: "category"
+    values:
+      layout: "sortByCategory"  #分类页使用的样式
+  -
+    scope:
+      path: ""
+      type: "tags"
     values:
       layout: "sortByCategory"  #分类页使用的样式
 
