@@ -27,8 +27,8 @@ maven是一个项目包管理工具，也是一种项目框架，满足maven项�
 
 * **管理外部依赖包的导入**：
 在没接触过maven的开发者，相信很多人都有为导入外部依赖包的繁琐操作而烦恼。以连接 MySQL 数据库的 Java 依赖包为例，在先前刚学 JavaWeb 尚未接触 maven 时，若想添加 mysql-connector-java 工具包，要在网上把工具包下载下来，再通过IDE或者其他方式添加到开发项目里，其他工具也同样如此，如果需要更换版本，则得重新下载新版本的包文件再导入。
-**如果使用 maven，事情会有很大不同。**每个 maven 项目都会有一个 pom.xml 文件（Project Object Model），导入工具包的过程将变为了修改 maven 项目的 pom.xml，在<dependencies>标签里面加入需导入工具包的<dependency>标签，可以在[官方仓库](http://mvnrepository.com/)网站搜索你需要的工具包的<dependency>。需更改版本时，只改动<dependency>标签里面的<version>标签即可。
-配置好 pom.xml 后，只需在 pom.xml 的路径中执行 `mvn install`，即可将依赖包下载到本地仓库，集中管理，如果有项目需要用这个包，则直接从本地仓库里获取。同样具有这种功能的工具还有 Gradle、Ant。
+**如果使用 maven，事情会有很大不同。**每个 maven 项目都会有一个 pom.xml 文件（Project Object Model），导入工具包的过程将变为了修改 maven 项目的 pom.xml，在 \<dependencies\> 标签里面加入需导入工具包的 \<dependency\> 标签，可以在 [官方仓库](http://mvnrepository.com/) 网站搜索你需要的工具包的 \<dependency\>。需更改版本时，只改动 \<dependency\> 标签里面的 \<version\> 标签即可。
+配置好 pom.xml 后，只需在 pom.xml 的路径中执行 `mvn install` ，即可将依赖包下载到本地仓库，集中管理，如果有项目需要用这个包，则直接从本地仓库里获取。同样具有这种功能的工具还有 Gradle、Ant。
 
 * **功能远不止依赖包管理**：
 maven 不仅仅可以为 maven 项目管理依赖包，它还可以将每个 maven 项目当作依赖包，甚至项目与项目之间还可以有面向对象特性的继承关系，每个项目是一个对象，项目里的所有内容是对象的属性，子项目可以继承父项目的所有内容。这样使得每个项目的独特性可以更强，项目与项目之间的耦合度可以很低 —— **像制作积木一样写项目，需要用时将积木拼凑起来构成应用。**
@@ -39,12 +39,12 @@ maven 不仅仅可以为 maven 项目管理依赖包，它还可以将每个 mav
 maven 在导入依赖包时，会按以下顺序在仓库中逐个寻找需要导入的包
 
 * 本地仓库：当前计算机的 maven 仓库，默认会有一个专门的文件夹作为本地仓库
-* 远程仓库：也被称为"内网仓库"，默认没有，可通过标签<repositories>进行配置
-* 官方仓库：默认为[官方仓库](http://mvnrepository.com/)，可通过标签<mirrors>进行镜像设置，例如阿里云的maven官方仓库镜像 [https://maven.aliyun.com/](https://maven.aliyun.com/)
+* 远程仓库：也被称为"内网仓库"，默认没有，可通过标签 \<repositories\> 进行配置
+* 官方仓库：默认为 [官方仓库](http://mvnrepository.com/) ，可通过标签 \<mirrors\> 进行镜像设置，例如阿里云的maven官方仓库镜像 [https://maven.aliyun.com/](https://maven.aliyun.com/)
 
 >[Maven 项目中依赖的搜索顺序实验 - 云栖社区](https://yq.aliyun.com/articles/644131)
 >
->结论：(检索项目依赖优先级)*local_repo > settings_profile_repo > pom_profile_repo > pom_repositories > settings_mirror > central*
+>结论：(检索项目依赖优先级) *local_repo > settings_profile_repo > pom_profile_repo > pom_repositories > settings_mirror > central*
 
 ### 生命周期
 
