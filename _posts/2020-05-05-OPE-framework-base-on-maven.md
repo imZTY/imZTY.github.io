@@ -60,7 +60,7 @@ zty-framework 的规范类，在 framework-common 里面进行了实现。分别
 
 ![framework-bo 依赖图](https://s1.ax1x.com/2020/05/13/YwipyF.png)
 
-对于负责对外提供API接口、接口处理的模块，zty-framework 抽象出了 framework-web，其他项目只需引入 frame-web 即完成了对所需依赖的导入。framework-web 的 maven 依赖图如下：
+对于负责对外提供API接口、接口参数处理的模块，zty-framework 抽象出了 framework-web，其他项目只需引入 frame-web 即完成了对所需依赖的导入。framework-web 的 maven 依赖图如下：
 
 ![framework-web 依赖图](https://s1.ax1x.com/2020/05/13/YwP7LQ.png)
 
