@@ -72,14 +72,15 @@ maven 在导入依赖包时，会按以下顺序在仓库中逐个寻找需要�
 * 使用IDE创建maven项目，通过IDE的maven指令管理进行操作，主流的Java开发IDE都支持maven项目，这里不赘述细节；
 
 >[Eclipse构建Maven项目 - 易百教程](https://www.yiibai.com/maven/m2eclipse-project.html)
+>
 >[在IDEA中创建maven项目](https://blog.csdn.net/zzy1078689276/article/details/78732183)
 
 
 ### 常见标签
 
 #### \<groupId\>
-位置：pom.xml
-作用：定义项目所在的组号，类似于java文件的package值
+位置：pom.xml<br>
+作用：定义项目所在的组号，类似于java文件的package值<br>
 举例 ：
 ```xml
 <groupId>com.zty</groupId>
@@ -87,8 +88,8 @@ maven 在导入依赖包时，会按以下顺序在仓库中逐个寻找需要�
 ___
 
 #### \<artifactId\>
-位置：pom.xml
-作用：定义项目的名称，与groupId共同构成唯一的项目索引，类似于java文件的class值
+位置：pom.xml<br>
+作用：定义项目的名称，与groupId共同构成唯一的项目索引，类似于java文件的class值<br>
 举例 ：
 ```xml
 <artifactId>account</artifactId>
@@ -96,8 +97,8 @@ ___
 ___
 
 #### \<version\>
-位置：pom.xml
-作用：定义项目的版本号，供项目的依赖者进行选择
+位置：pom.xml<br>
+作用：定义项目的版本号，供项目的依赖者进行选择<br>
 举例 ：
 ```xml
 <version>1.1.0</version>
@@ -105,8 +106,8 @@ ___
 ___
 
 #### \<properties\>
-位置：pom.xml
-作用：定义属性值，同一项目的其他地方可以通过EL表达式（${ }）来获取这些属性值的内容，这样做的目的是统一管理那些被多次使用的内容
+位置：pom.xml<br>
+作用：定义属性值，同一项目的其他地方可以通过EL表达式（${ }）来获取这些属性值的内容，这样做的目的是统一管理那些被多次使用的内容<br>
 举例 ：
 ```xml
 <version>${zty-framework.version}</version>
@@ -120,8 +121,8 @@ ___
 ___
 
 #### \<parent\>
-位置：pom.xml
-作用：声明当前项目继承的父项目，类似于java文件的extends，子项目将会继承父项目的所有内容，包括父项目的<properties>
+位置：pom.xml<br>
+作用：声明当前项目继承的父项目，类似于java文件的extends，子项目将会继承父项目的所有内容，包括父项目的\<properties\><br>
 举例 ：
 ```xml
 <parent>
@@ -133,8 +134,8 @@ ___
 ___
 
 #### \<packaging\>
-位置：pom.xml
-作用：声明当前项目的打包格式，默认值为jar，可选值为war、jar、pom
+位置：pom.xml<br>
+作用：声明当前项目的打包格式，默认值为jar，可选值为war、jar、pom<br>
 举例 ：
 ```xml
 <packaging>war</packaging>
@@ -142,8 +143,8 @@ ___
 ___
 
 #### \<module\>
-位置：pom.xml - \<modules\>
-作用：定义当前项目的子模块，必须与\<packaging\>pom\</packaging\>配套使用（所有被继承的项目的packaging必须为pom）
+位置：pom.xml - \<modules\><br>
+作用：定义当前项目的子模块，必须与\<packaging\>pom\</packaging\>配套使用（所有被继承的项目的packaging必须为pom）<br>
 举例 ：
 ```xml
 <packaging>pom</packaging>
@@ -159,9 +160,9 @@ ___
 ```
 ___
 
-#### <repository>
-位置：setting.xml - \<repositories\>
-作用：定义"远程仓库"，例如公司内部的maven仓库地址
+#### \<repository\>
+位置：setting.xml - \<repositories\><br>
+作用：定义"远程仓库"，例如公司内部的maven仓库地址<br>
 举例 ：
 ```xml
 <repositories>
@@ -180,9 +181,9 @@ ___
 ```
 ___
 
-#### <dependency>
-位置：pom.xml - \<dependencies\>
-作用：用于指明需要引入的依赖
+#### \<dependency\>
+位置：pom.xml - \<dependencies\><br>
+作用：用于指明需要引入的依赖<br>
 举例 ：
 ```xml
 <dependency>  
@@ -197,8 +198,8 @@ ___
 
 #### \<plugins\>
 
-位置：pom.xml - \<build\>或\<reporting\>
-作用：指明用于覆盖maven默认操作的工具。maven指令的执行，其实也是基于插件进行的，maven有一套默认的官方插件，如果在项目pom.xml里引入plugins，执行maven指令操作时将会优先基于plugins的逻辑对项目进行操作，而不是maven默认的官方插件，例如Springboot打包的原理就是引入了专门的springboot-plugins。<build>对应于打包操作，<reporting>对应于报告。
+位置：pom.xml - \<build\>或\<reporting\><br>
+作用：指明用于覆盖maven默认操作的工具。maven指令的执行，其实也是基于插件进行的，maven有一套默认的官方插件，如果在项目pom.xml里引入plugins，执行maven指令操作时将会优先基于plugins的逻辑对项目进行操作，而不是maven默认的官方插件，例如Springboot打包的原理就是引入了专门的springboot-plugins。<build>对应于打包操作，<reporting>对应于报告。<br>
 举例 ：
 ```xml
 ...
