@@ -233,6 +233,6 @@ ___
 
 好的，“从实用角度快速理解maven”的所有内容到此正式结束了。[《一篇就够》](/tagSort/one-post-enough/) 系列是我沉淀各种知识整理而成的文章，只有沉淀到足够教会一个完全新人的程度我才会在里面写文章，每一篇都是我倾尽当时的所有才华所写的精品文章，欢迎常来逛逛哦。
 
-![我的微信二维码](https://upload-images.jianshu.io/upload_images/8463645-4a9e2aee90c8736b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![我的微信二维码](https://s1.ax1x.com/2020/05/13/YwZ2X6.jpg)
 
 我是一个自我定位为“喜欢开发有趣工具的Java开发者"，如果对我的文章有任何疑惑或者想交流的地方，欢迎添加我的微信，二维码如上。

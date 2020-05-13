@@ -12,4 +12,4 @@ permalink: /about/
 
 lol 微信收款码与支付宝收款码分别如下：
 
-![微信](/assets/pic/about/wxPay.jpg)![支付宝](/assets/pic/about/aliPay.jpg)
+![微信](https://s1.ax1x.com/2020/05/13/YweyVS.jpg)![支付宝](https://s1.ax1x.com/2020/05/13/Ywerb8.jpg)

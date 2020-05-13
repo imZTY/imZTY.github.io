@@ -250,6 +250,6 @@ ___
 
 好的，GithubPage + Jekyll 个人博客项目 V1.0.0 到此正式告一段落了，[《项目日记》](/tagSort/project-diary/) 系列是我学习新技术时记录学习过程的文章。此外，由于我一般会在学习新技术的时候，把生活中积累的想法拿出来用新技术实现，所以这个系列还会包含一些有趣想法从构思到实现的过程哦。敬请期待。
 
-![我的微信二维码](https://upload-images.jianshu.io/upload_images/8463645-4a9e2aee90c8736b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![我的微信二维码](https://s1.ax1x.com/2020/05/13/YwZ2X6.jpg)
 
 我是一个自我定位为“喜欢开发有趣工具的Java开发者"，如果对我的文章有任何疑惑或者想交流的地方，欢迎添加我的微信，二维码如上。

@@ -46,27 +46,27 @@ zty-framework 属于轻量级框架，完全基于 maven 项目框架的特性�
 
 首先是 zty-framework 的目录结构图：
 
-![zty-framework 目录结构](https://i.imgur.com/lXdN1Xk.png)
+![zty-framework 目录结构](https://s1.ax1x.com/2020/05/13/YwP5z8.png)
 
 对于负责统一实现并管理实体类、通用类(公共类)、工具类的模块，zty-framework 抽象出了 framework-common，其他项目只需引入 framework-common 依赖，即可完成所需依赖包的导入。framework-common 的 maven 依赖图如下：
 
-![framework-common 依赖图](https://i.imgur.com/hL7W9HB.png)
+![framework-common 依赖图](https://s1.ax1x.com/2020/05/13/YwiSQU.png)
 
 zty-framework 的规范类，在 framework-common 里面进行了实现。分别是这四部分：1）框架自定义注解；2）框架规范参数类；3）框架异常规范类；4）框架工具类。如果需修改这些内容，只需在 framework-common 里进行修改即可。
 
-![framework-common 内容](https://i.imgur.com/5qF5gin.png)
+![framework-common 内容](https://s1.ax1x.com/2020/05/13/YwPxzT.png)
 
 对于负责实现与数据库交互、完成业务功能的模块，zty-framework 抽象出了 framework-bo（BO表示Business Object，这里指业务对象层），其他项目只需引入 frame-bo 即完成了对所需依赖的导入。framework-bo 的 maven 依赖图如下：
 
-![framework-bo 依赖图](https://i.imgur.com/BEX0NnF.png)
+![framework-bo 依赖图](https://s1.ax1x.com/2020/05/13/YwipyF.png)
 
 对于负责对外提供API接口、接口处理的模块，zty-framework 抽象出了 framework-web，其他项目只需引入 frame-web 即完成了对所需依赖的导入。framework-web 的 maven 依赖图如下：
 
-![framework-web 依赖图](https://i.imgur.com/akYtjyq.png)
+![framework-web 依赖图](https://s1.ax1x.com/2020/05/13/YwP7LQ.png)
 
 对于按实际需要集成各模块、生成可部署项目的模块，zty-framework 抽象出了 framework-springboot-app 模块，maven 依赖图如下：
 
-![framework-springboot-app 依赖图](https://i.imgur.com/TyImqvH.png)
+![framework-springboot-app 依赖图](https://s1.ax1x.com/2020/05/13/Ywi9L4.png)
 
 
 以上只是笔者搭建的示例，framework 各模块的依赖可以按需选择、调整。
@@ -77,41 +77,41 @@ zty-framework 的规范类，在 framework-common 里面进行了实现。分别
 
 首先是创建负责定义公用实体类的 account-common 模块，引入 framework-common 依赖：
 
-![account-common 依赖图](https://i.imgur.com/VM7y36q.png)
+![account-common 依赖图](https://s1.ax1x.com/2020/05/13/YwPqds.png)
 
 account-common 的实体类包括数据对象类（DO）和数据传输对象类（DTO），其中DO表示数据库表结构相对应的实体类，DTO表示用于传输的字段脱敏后的类，POJO命名遵从[阿里巴巴开发规范](https://edu.aliyun.com/certification/cldt02)：
 
-![account-common 内容](https://i.imgur.com/w5LE2X2.png)
+![account-common 内容](https://s1.ax1x.com/2020/05/13/YwPLon.png)
 
 第二步是创建负责完成与数据库交互的 account-bo 模块，引入 framework-bo 和 account-common 依赖：
 
-![account-bo 依赖图](https://i.imgur.com/WTidTUM.png)
+![account-bo 依赖图](https://s1.ax1x.com/2020/05/13/YwPoQS.png)
 
 account-bo 模块的内容主要包括DAO类和Service类，如果业务涉及到复杂流程的实现，还可以基于Service类提供的方法，实现API类：
 
-![account-bo 内容](https://i.imgur.com/aYDCD95.png)
+![account-bo 内容](https://s1.ax1x.com/2020/05/13/YwPbZj.png)
 
 第三步是创建负责提供 http 接口的 account-web 模块，引入 framework-web 和 account-bo 依赖：
 
-![account-web 依赖图](https://i.imgur.com/g9GpYtW.png)
+![account-web 依赖图](https://s1.ax1x.com/2020/05/13/YwPvWV.png)
 
 account-web 主要实现 Controller 类，完成参数检查，调用 bo 层的接口方法实现功能：
 
-![account-web 内容](https://i.imgur.com/3RAxH0D.png)
+![account-web 内容](https://s1.ax1x.com/2020/05/13/YwPXiq.png)
 
 最后一步，结合实际需求，对各个功能模块进行集成，搭建一个可部署的项目。这里的 service-customer 模块引入了"账号管理模块"、"微信授权模块"、"文件管理模块"和"缓存管理模块"的依赖，当然还有 framework-springboot-app，完整依赖图如下：
 
-![service-customer 依赖图](https://i.imgur.com/pzxRSdu.png)
+![service-customer 依赖图](https://s1.ax1x.com/2020/05/13/YwPjJ0.png)
 
 各个其他模块的功能，皆已在各模块内完成了实现，service-customer 只需基于 Spring AOP 按业务需求完成统一参数处理和统一异常处理即可：
 
-![service-customer 内容](https://i.imgur.com/lBjgU9h.png)
+![service-customer 内容](https://s1.ax1x.com/2020/05/13/YwPTsg.png)
 
 ### 搭建过程
 
 1. 创建 maven 空工程，命名为 framework；
-2. 将工程 framework 的 pom.xml 的<packaging>改为`pom`；
-3. 在工程 framework 的 pom.xml 里定义框架的子模块，声明到 <modules> 里；
+2. 将工程 framework 的 pom.xml 的 \<packaging\> 改为 `pom`;
+3. 在工程 framework 的 pom.xml 里定义框架的子模块，声明到 \<modules\> 里；
 
 前3步的pom.xml完整代码如下：
 
@@ -152,7 +152,7 @@ account-web 主要实现 Controller 类，完成参数检查，调用 bo 层的�
 </project>
 ```
 
-4. 分别创建框架子模块 framework-common、framework-bo、framework-web 和 framework-springboot-app，并在<parent>标签里使他们继承于 framework；
+4. 分别创建框架子模块 framework-common、framework-bo、framework-web 和 framework-springboot-app，并在 \<parent\> 标签里使他们继承于 framework；
 5. 在相应的模块里引入依赖；
 6. 如果需要，实现相应模块的代码类；
 
@@ -189,7 +189,7 @@ ___
 
 好的，maven最佳实践——教你搭建自制的开发框架到此正式结束了。[《一篇就够》](/tagSort/one-post-enough/) 系列是我沉淀各种知识整理而成的文章，只有沉淀到足够教会一个完全新人的程度我才会在里面写文章，每一篇都是我倾尽当时的所有才华所写的精品文章，欢迎常来逛逛哦。
 
-![我的微信二维码](https://upload-images.jianshu.io/upload_images/8463645-4a9e2aee90c8736b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![我的微信二维码](https://s1.ax1x.com/2020/05/13/YwZ2X6.jpg)
 
 我是一个自我定位为“喜欢开发有趣工具的Java开发者"，如果对我的文章有任何疑惑或者想交流的地方，欢迎添加我的微信，二维码如上。
 
