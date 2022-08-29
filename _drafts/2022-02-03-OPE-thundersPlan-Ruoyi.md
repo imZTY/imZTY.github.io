@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "一篇就够 | Spring对各Java版本特性的实践"
-date:   2021-10-18 08:52:10 +0800
+title:  "一篇就够 | 若依天雷计划"
+date:   2022-02-03 08:52:10 +0800
 categories: onePostEnough
 permalink: /:categories/:year/:month/:day/:title/
 tags: 
-- Spring
-- 版本特性
-- 资料汇总
+- Rouyi框架
+- 天雷计划
+- 低代码
 excerpt_separator: <!--more-->
 ---
 
-Spring对各版本的Java特性有较多实践，这里只整理常用的功能。<!--more-->
+认识Rouyi框架后，重新燃起了对天雷计划的热情。<!--more-->
