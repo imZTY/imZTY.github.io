@@ -118,6 +118,7 @@ Github Page 优先读取名为 index 的文件，其次再读取名为 README �
 > cd myblog                         # 进入目录
 > bundle exec jekyll serve          # 启动项目
 > start http://localhost:4000       # 浏览器访问
+> jekyll build --safe jekyll        # 代码提交前，检查打包情况，以便快速更新
 ```
 
 ### Jekyll 项目的目录结构
