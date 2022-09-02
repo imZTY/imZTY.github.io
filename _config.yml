@@ -84,3 +84,10 @@ remote_theme: samarsault/plainwhite-jekyll # githubPage need this
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
+
+# Gitalk settings
+comment_gitalk_clientId: b4da5856fb7887b66c79
+comment_gitalk_clientSecret: da26529e26539b1b6b344f7bb37cfe3c94731bb6
+comment_gitalk_repo: imzty.github.io
+github_username: imzty
+
