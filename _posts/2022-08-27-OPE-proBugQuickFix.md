@@ -13,6 +13,9 @@ excerpt_separator: <!--more-->
 
 由一次生产问题延伸出来的知识沉淀。当业务发展到了网络带宽跑满的时候，会发生这种事情。<!--more-->
 
+-  
+{:toc}
+
 ### 背景描述：
 
 我司是主要给银行做收单系统的，其中有一家银行对资源利用率的追求比较高(抠抠搜搜)，这家银行给我们提供的CPU、内存、磁盘、网络带宽、数据库连接数都很有限，2C服务的平均资源使用率达到80%以上，非常饱和。我们系统的跟其他业务系统共用一个公网IP，相当于共用这个IP的网络带宽。
@@ -83,10 +86,6 @@ excerpt_separator: <!--more-->
 <style>
 strong {
     color: red;
-}
-td,th {
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
 }
 table th:first-of-type {
     width: 8vw;

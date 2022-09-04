@@ -13,11 +13,8 @@ excerpt_separator: <!--more-->
 
 这篇文章会将笔者站在实用角度认为 maven 最重要的知识抽象提取出来，直击重点，从理论层面带你快速理解什么是 maven。<!--more-->
 
-内容预览：
-* maven 的概念与作用
-* maven 生命周期
-* maven 使用方式
-* maven 最佳实践（搭建自己的开发框架）
+* 
+{:toc}
 
 ## 一、maven介绍
 
