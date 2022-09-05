@@ -42,6 +42,8 @@ plainwhite:
       url: /tagSort/one-post-enough/
     - title: 项目日记
       url: /tagSort/project-diary/
+    - title: 阅读笔记
+      url: /tagSort/reading-note/
   # generate social links in footer
   social_links:
     github:  imZTY
