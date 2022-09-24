@@ -24,7 +24,7 @@ maven是一个项目包管理工具，也是一种项目框架，满足maven项�
 
 * **管理外部依赖包的导入**：
 在没接触过maven的开发者，相信很多人都有为导入外部依赖包的繁琐操作而烦恼。以连接 MySQL 数据库的 Java 依赖包为例，在先前刚学 JavaWeb 尚未接触 maven 时，若想添加 mysql-connector-java 工具包，要在网上把工具包下载下来，再通过IDE或者其他方式添加到开发项目里，其他工具也同样如此，如果需要更换版本，则得重新下载新版本的包文件再导入。
-**如果使用 maven，事情会有很大不同。**每个 maven 项目都会有一个 pom.xml 文件（Project Object Model），导入工具包的过程将变为了修改 maven 项目的 pom.xml，在 \<dependencies\> 标签里面加入需导入工具包的 \<dependency\> 标签，可以在 [官方仓库](http://mvnrepository.com/) 网站搜索你需要的工具包的 \<dependency\>。需更改版本时，只改动 \<dependency\> 标签里面的 \<version\> 标签即可。
+**如果使用 maven，事情会有很大不同。**每个 maven 项目都会有一个 pom.xml 文件（Project Object Model），导入工具包的过程将变为了修改 maven 项目的 pom.xml，在 \<dependencies\> 标签里面加入需导入工具包的 \<dependency\> 标签，可以在 [官方仓库](http://mvnrepository.com/){:target="_blank"} 网站搜索你需要的工具包的 \<dependency\>。需更改版本时，只改动 \<dependency\> 标签里面的 \<version\> 标签即可。
 配置好 pom.xml 后，只需在 pom.xml 的路径中执行 `mvn install` ，即可将依赖包下载到本地仓库，集中管理，如果有项目需要用这个包，则直接从本地仓库里获取。同样具有这种功能的工具还有 Gradle、Ant。
 
 * **功能远不止依赖包管理**：
@@ -37,15 +37,16 @@ maven 在导入依赖包时，会按以下顺序在仓库中逐个寻找需要�
 
 * 本地仓库：当前计算机的 maven 仓库，默认会有一个专门的文件夹作为本地仓库
 * 远程仓库：也被称为"内网仓库"，默认没有，可通过标签 \<repositories\> 进行配置
-* 官方仓库：默认为 [官方仓库](http://mvnrepository.com/) ，可通过标签 \<mirrors\> 进行镜像设置，例如阿里云的maven官方仓库镜像 [https://maven.aliyun.com/](https://maven.aliyun.com/)
+* 官方仓库：默认为 [官方仓库](http://mvnrepository.com/){:target="_blank"} ，可通过标签 \<mirrors\> 进行镜像设置，例如阿里云的maven官方仓库镜像 [https://maven.aliyun.com/](https://maven.aliyun.com/){:target="_blank"}
 
->[Maven 项目中依赖的搜索顺序实验 - 云栖社区](https://yq.aliyun.com/articles/644131)
+>[maven 官方文档 - 依赖引入优先级规则](https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html){:target="_blank"}
+>[Maven 项目中依赖的搜索顺序实验 - 云栖社区](https://yq.aliyun.com/articles/644131){:target="_blank"}
 >
 >结论：(检索项目依赖优先级) *local_repo > settings_profile_repo > pom_profile_repo > pom_repositories > settings_mirror > central*
 
 ### 生命周期
 
->maven官方文档：[入门指南 - 生命周期](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html)
+>maven官方文档：[入门指南 - 生命周期](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html){:target="_blank"}
 
 以下是build一个项目时，可选的生命周期，也被称为"构建生命周期"，选择一个生命周期后，maven会按下方的顺序依次执行各个生命周期，直至所选的那个生命周期执行结束。例如如果选择了 `package`，则会从 `validate` 执行至 `package`，不需要进行后面的 `verify`、`install`、`deploy`。
 
@@ -65,12 +66,12 @@ maven 在导入依赖包时，会按以下顺序在仓库中逐个寻找需要�
 ### 使用方式
 
 * 命令行操作，将maven的启动目录配置为环境变量，即可在任意路径下执行 mvn 指令了；
-> [Maven常用命令 - cnblogs](https://www.cnblogs.com/wkrbky/p/6352188.html)
+> [Maven常用命令 - cnblogs](https://www.cnblogs.com/wkrbky/p/6352188.html){:target="_blank"}
 * 使用IDE创建maven项目，通过IDE的maven指令管理进行操作，主流的Java开发IDE都支持maven项目，这里不赘述细节；
 
->[Eclipse构建Maven项目 - 易百教程](https://www.yiibai.com/maven/m2eclipse-project.html)
+>[Eclipse构建Maven项目 - 易百教程](https://www.yiibai.com/maven/m2eclipse-project.html){:target="_blank"}
 >
->[在IDEA中创建maven项目](https://blog.csdn.net/zzy1078689276/article/details/78732183)
+>[在IDEA中创建maven项目](https://blog.csdn.net/zzy1078689276/article/details/78732183){:target="_blank"}
 
 
 ### 常见标签

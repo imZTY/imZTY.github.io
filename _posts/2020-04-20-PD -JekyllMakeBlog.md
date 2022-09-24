@@ -212,7 +212,7 @@ Github Page 优先读取名为 index 的文件，其次再读取名为 README �
 
 ### 第一步：安装 Jekyll 与环境
 
-1. 安装 Ruby 与 RubyGems，[windows端Ruby官方安装包下载地址](https://rubyinstaller.org/downloads/)；
+1. 安装 Ruby 与 RubyGems，[windows端Ruby官方安装包下载地址](https://rubyinstaller.org/downloads/){:target="_blank"}；
 2. 使用 Ruby 的 gem 指令安装 Jekyll，`gem install jekyll bundler`；
 3. 验证安装结果，`jekyll -v`；
 
@@ -221,7 +221,7 @@ Github Page 优先读取名为 index 的文件，其次再读取名为 README �
 1. 推荐去 [Jekyll官方样式主题网](http://jekyllthemes.org/) 寻找样式；
 2. 下载，解压；
 3. 命令行进入解压后的文件夹，运行指令 `bundle exec jekyll serve --trace`；
-4. 打开浏览器，访问 [http://localhost:4000](http://localhost:4000/) 查看效果；
+4. 打开浏览器，访问 [http://localhost:4000](http://localhost:4000/){:target="_blank"} 查看效果；
 
 ### 第三步：对细节进行调整
 
@@ -231,17 +231,17 @@ Github Page 优先读取名为 index 的文件，其次再读取名为 README �
 
 1. 最上层的页面内容在 _layout 文件夹里的**含有<!DOCTYPE html>标签**的 .html 文件里，一般命名为 default.html；
 2. 继承 layout: default 的文件中，主页一般是 home.html，文章详情页一般是 post.html，其他页面一般是 page.html；
-3. 如果想根据配置或者文章属性进行取值渲染，可基于 [Liquid](https://shopify.github.io/liquid/basics/introduction/) 语法从 site、page 对象里面取值，可查阅 [Jekyll官方文档之Variables](https://jekyllrb.com/docs/variables/) 获取更多信息；
+3. 如果想根据配置或者文章属性进行取值渲染，可基于 [Liquid](https://shopify.github.io/liquid/basics/introduction/){:target="_blank"} 语法从 site、page 对象里面取值，可查阅 [Jekyll官方文档之Variables](https://jekyllrb.com/docs/variables/){:target="_blank"} 获取更多信息；
 
 对于CSS样式的定位：
 
-1. 浏览器访问 [http://localhost:4000](http://localhost:4000/) 后，开启开发者工具寻找某标签样式的出处，再前往该出处文件进行样式修改；
+1. 浏览器访问 [http://localhost:4000](http://localhost:4000/){:target="_blank"} 后，开启开发者工具寻找某标签样式的出处，再前往该出处文件进行样式修改；
 
 设置分类专用页面，我这里提供一种思路：
 
 1. 在 _layout 文件夹创建你想要的分类布局方式，例如我这里创建为 `sortByCategory.html`，主要关注如何循环取值渲染文章列表；
 2. 创建文件夹 `_category`，并在里面创建几个用来存放分类条件的 markdown 文件，每种分类创建一个文件，在这些文件的 front matter 区域写入该文件对应的分类条件，**这里的特异性 front matter 是用来区分不同分类的，将会被** `sortByCategory.html` **从 page 对象获取到，作为条件渲染的条件**，我还建议在这些 markdown 文件里面设置 `permalink` 属性，设置为当前分类页的访问路径；
-3. 基于 _config.yml 可以给指定范围的文件设置 front matter 默认值的机制（[官方文档Front Matter Defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/)），给上一步创建的 markdown 文件设置 layout 默认值，例如我这里设置成 `layout: "sortByCategory"`；
+3. 基于 _config.yml 可以给指定范围的文件设置 front matter 默认值的机制（[官方文档Front Matter Defaults](https://jekyllrb.com/docs/configuration/front-matter-defaults/){:target="_blank"}），给上一步创建的 markdown 文件设置 layout 默认值，例如我这里设置成 `layout: "sortByCategory"`；
 4. 如果 `sortByCategory.html` 的条件渲染逻辑没有异常的话，分类文章列表页面就完成了；
 
 ___
