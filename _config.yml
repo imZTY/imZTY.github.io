@@ -1,4 +1,4 @@
-title: Welcome to my blog
+title: Blog of youth and passion
 author: Teenyee Zeng
 email: 326640559@qq.com
 description: > # this means to ignore newlines until "show_exerpts:"
@@ -6,6 +6,7 @@ description: > # this means to ignore newlines until "show_exerpts:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 show_excerpts: true # set to true to show excerpts on the homepage
+
 
 collections:
   category:
@@ -41,6 +42,8 @@ plainwhite:
       url: /tagSort/one-post-enough/
     - title: 项目日记
       url: /tagSort/project-diary/
+    - title: 阅读笔记
+      url: /tagSort/reading-note/
   # generate social links in footer
   social_links:
     github:  imZTY
@@ -76,8 +79,17 @@ plainwhite:
 # - about.md
 
 # Build settings
-theme: plainwhite
+# theme: plainwhite
+remote_theme: samarsault/plainwhite-jekyll # githubPage need this
+
 
 plugins:
   - jekyll-seo-tag
 #  - jekyll-feed
+
+# Gitalk settings
+comment_gitalk_clientId: b4da5856fb7887b66c79
+comment_gitalk_clientSecret: da26529e26539b1b6b344f7bb37cfe3c94731bb6
+comment_gitalk_repo: imzty.github.io
+github_username: imzty
+

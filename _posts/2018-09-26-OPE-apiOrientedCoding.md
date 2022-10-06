@@ -18,6 +18,11 @@ excerpt_separator: <!--more-->
 
 **[ 注意：此接口(API)非彼接口(interface) ]**
 
+
+* 
+{:toc}
+
+
 ## 内容预告
 本文将包含笔者对面向接口开发的理解，主要包括：
 1. 什么是接口以及它的种类有哪些；
@@ -48,7 +53,7 @@ _Before all:_
 
 
 #### 类型一：信息型接口
-以[淘宝网](https://s.taobao.com/search?q=456&imgfile=&js=1&stats_click=search_radio_all%3A1&initiative_id=staobaoz_20180926&ie=utf8)为例，当用户在搜索框中输入"456"后，浏览器会发送下面这个请求到淘宝服务器进行信息搜索：
+以[淘宝网](https://s.taobao.com/search?q=456&imgfile=&js=1&stats_click=search_radio_all%3A1&initiative_id=staobaoz_20180926&ie=utf8){:target="_blank"}为例，当用户在搜索框中输入"456"后，浏览器会发送下面这个请求到淘宝服务器进行信息搜索：
 >https://s.taobao.com/api?_ksTS=1537948494224_212&callback=jsonp213&ajax=true&m=customized&stats_click=search_radio_all:1&q=456&s=36&imgfile=&initiative_id=staobaoz_20180926&bcoffset=0&js=1&ie=utf8&rn=f6fe7f859aaf6ff7e63ddfb0ccc9c766
 
 待服务器搜索完信息后，会把信息打包成 json 格式的数据返回给用户（这时的信息数据还是纯文本），然后用户就能够看到经过渲染后的页面了（这时的信息数据已经是相应位置的内容了）。_其中 json 格式是一种便于进行数据渲染的数据展现形式。_
@@ -64,7 +69,7 @@ _Before all:_
 
 
 #### 类型三：资源型接口
-以百度语音合成 [REST API](http://ai.baidu.com/docs#/TTS-API/top) 为例，当用户按照API接口文档的规则拼装好一个url后，访问该url即可得到百度语音合成的结果（.mp3文件）。
+以百度语音合成 [REST API](http://ai.baidu.com/docs#/TTS-API/top){:target="_blank"} 为例，当用户按照API接口文档的规则拼装好一个url后，访问该url即可得到百度语音合成的结果（.mp3文件）。
 
 
 
@@ -102,8 +107,7 @@ _笔者曾经和前端同学合作开发过一个基于DWR的即时通信双人�
 _威胁主要来自于——接口太容易被获取，web端通过浏览器的开发者工具(F12)即可查看网络请求的发送记录，其他形式的客户端也可以通过抓包工具等方式拦截网络请求并查看。API请求可以轻而易举地被查看、解读。_
 
 #### 威胁一：容易被滥用，增加服务器的不必要负担
->[一篇关于服务器如何深受爬虫所害的文章](https://mp.weixin.qq.com/s/0Rjp7qyV2SGtY1tvBLHT8Q
-)
+>[一篇关于服务器如何深受爬虫所害的文章](https://mp.weixin.qq.com/s/0Rjp7qyV2SGtY1tvBLHT8Q){:target="_blank"}
 
 如上文，爬虫技术其实是一种通过解读API并自动化地发送网络请求的形式实现爬虫开发者心愿的技术。然而自动化地发送请求的频率往往比真实用户发送请求的频率高得多，倘若同一时间有多个爬虫在不停地访问服务器，那么无疑会加重服务器的负担，而这种虚假的用户占据的服务器资源多了，真实的用户可以享用的服务器资源就少了。
 
@@ -123,8 +127,8 @@ _威胁主要来自于——接口太容易被获取，web端通过浏览器的�
 #### 步骤二：测试接口，写接口文档
 自己访问自己设计的API，检查数据是否异常。
 推荐两个实用工具：
->[1. 用于接口测试的postman客户端](https://www.getpostman.com/apps)
->[2. 用于自动生成接口文档的框架apidoc](http://apidocjs.com/)
+>[1. 用于接口测试的postman客户端](https://www.getpostman.com/apps){:target="_blank"}
+>[2. 用于自动生成接口文档的框架apidoc](http://apidocjs.com/){:target="_blank"}
 
 
 #### 步骤三：将后端程序发布到服务器
@@ -144,4 +148,4 @@ ___
 >咀嚼 = 做笔记整理/解读优秀作品（顺便再次阅读/学习）<br>
 >消化 = 反复思考+理解<br>
 >吸收 = 在实际生活学习或项目中尝试使用该知识、感受该知识<br>
-[——《如何高效学习》](https://book.douban.com/subject/25783654/)
+[——《如何高效学习》](https://book.douban.com/subject/25783654/){:target="_blank"}

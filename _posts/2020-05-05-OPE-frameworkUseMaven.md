@@ -15,11 +15,12 @@ excerpt_separator: <!--more-->
 
 > [一篇就够 \| 快速理解什么是maven](/onepostenough/2020/05/04/OPE-fast-know-maven/)
 
-内容预览：
-* 讨论什么是“框架”
-* 展示一个简单的基于 maven 特性搭建的自制框架
-* 展示上述自制框架的使用示例
-* 自制框架的搭建过程
+
+* 
+{:toc}
+
+
+
 
 ## 一、什么是框架
 
