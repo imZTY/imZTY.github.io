@@ -23,7 +23,7 @@
             <a href="https://www.zhihu.com/people/{{ site.plainwhite.social_links.zhihu }}">
               <li>
                 <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-ziyuan"></use>
+                  <use xlink:href="#icon-zhihu-square-fill"></use>
                 </svg>
               </li>
             </a>
@@ -37,11 +37,20 @@
               </li>
             </a>
           {%- endif -%}
+          {%- if site.plainwhite.social_links.yuque -%}
+          <a href="https://www.yuque.com/{{ site.plainwhite.social_links.yuque }}">
+            <li>
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-yuque"></use>
+              </svg>
+            </li>
+          </a>
+          {%- endif -%}
           {%- if site.plainwhite.social_links.jianshu -%}
             <a href="https://www.jianshu.com/u/{{ site.plainwhite.social_links.jianshu }}">
               <li>
                 <svg class="icon" aria-hidden="true">
-                  <use xlink:href="#icon-yanzheng-jianshu"></use>
+                  <use xlink:href="#icon-jianshu"></use>
                 </svg>
               </li>
             </a>
