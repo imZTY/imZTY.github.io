@@ -63,6 +63,8 @@
   margin-left: .4em;
   fill: currentColor;
   overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 17%;
 }
 
 .icon-calendar:before { content: '\e800'; } /* '' */
